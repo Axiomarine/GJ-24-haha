@@ -2,12 +2,8 @@ using UnityEngine;
 
 public class RoomsController : MonoBehaviour
 {
+    // this script just renders the backround you ask it too (very unoptimazed, but who cares)
     public Sprite backgroundSprite;
-
-    void Start()
-    {
-
-    }
 
     public void SetupBackground()
     {

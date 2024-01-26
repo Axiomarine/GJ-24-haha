@@ -17,11 +17,13 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        // creates first room with the first monster
         InitialSetup();
     }
 
     void InitialSetup()
     {
+        // map index to choose from the array or whatever 
         int map = 1;
         AddEnemy(enemy, enemySpawnCoordinates);
         AddBackground(map);
@@ -29,11 +31,18 @@ public class GameManager : MonoBehaviour
 
     void AddEnemy(GameObject prefab, Vector2 spawnCoordinates)
     {
+        // just adds the enemy in the scene
         Instantiate(prefab, spawnCoordinates, Quaternion.identity);
     }
 
     void AddBackground(int map)
     {
+        //creates a background which has the index you send
         roomsController.SetupBackground();
+    }
+
+    public void WhatButton(int but)
+    {
+        Debug.Log(but);
     }
 }
