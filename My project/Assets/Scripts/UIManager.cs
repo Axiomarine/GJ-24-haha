@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameManager gameManager;
+    public Canvas canvas;
     public Button jokeButton1;
     public Button jokeButton2;
     public Button jokeButton3;
@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
 
     void ChooseJoke(int jokeIndex)
     {
-        GameManager.instance.WhatButton(jokeIndex);
+        canvas.enabled = false;
+        GameManager.instance.WhatJokeWasChoosed(jokeIndex);
     }
 }

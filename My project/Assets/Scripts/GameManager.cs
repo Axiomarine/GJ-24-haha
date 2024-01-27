@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     public GameObject enemy;
 
     public RoomsController roomsController;
+    public JokeManager jokeManager;
+    public StringArrayConv stringArrayConv;
+    public CombatManager combbatManager;
+
     private Vector2 enemySpawnCoordinates = Vector2.zero;
 
 
@@ -41,8 +45,20 @@ public class GameManager : MonoBehaviour
         roomsController.SetupBackground();
     }
 
-    public void WhatButton(int but)
+    public void WhatJokeWasChoosed(int button)
     {
-        Debug.Log(but);
+        string joke = jokeManager.ChoosingJokeFromTheDatabase(button);
+        StringToArray(joke);
+    }
+
+    public void StringToArray(string joke)
+    {
+        char[] charArray = stringArrayConv.ConvertStringToArray(joke);
+        CombatStarts(charArray);
+    }
+
+    public void CombatStarts(char[] simbols)
+    {
+        combbatManager.TheCombatStarts(simbols);
     }
 }
