@@ -47,8 +47,8 @@ public class GameManager : MonoBehaviour
 
     public void WhatJokeWasChoosed(int button)
     {
-        string joke = jokeManager.ChoosingJokeFromTheDatabase(button);
-        StringToArray(joke);
+        //string joke = jokeManager.ChoosingJokeFromTheDatabase(button);
+        //StringToArray(joke);
     }
 
     public void StringToArray(string joke)
