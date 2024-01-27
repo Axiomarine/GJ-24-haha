@@ -64,11 +64,11 @@ public class GameManager : MonoBehaviour
     
     public void PassingLevel()
     {
-        // the code initiated after passing and defeating enemy with your jokes
+        
     }
 
     public void LoosingLevel()
     {
-        // the code called after loosing level
+        
     }
 }
